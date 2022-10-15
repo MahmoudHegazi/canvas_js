@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100"
+style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+let stampW = 1;
+let stampH = 1;
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#FF0000";
+  //ctx.fillRect(0,0,5,5);
+  
+  canvas.addEventListener("click", (event)=>{
+    //alert(event.offsetX);
+    //alert(event.offsetY);
+   ctx.fillStyle = "#FF0000";
+   ctx.fillRect((event.offsetX - (stampW/2)),(event.offsetY-(stampH/2) + (stampH/45)),stampW,stampH);
+
+  });
+
+</script>
+
+</body>
+</html>
+
